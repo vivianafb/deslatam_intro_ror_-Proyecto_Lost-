@@ -3113,3 +3113,1196 @@ Processing by PinsController#new as HTML
 Completed 200 OK in 142ms (Views: 135.0ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToPin (20180613014012)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "pins" ADD "name" varchar[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613014012"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:44:21 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (4.5ms)
+  Rendered pins/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (9.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 208.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:46:19 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.3ms)
+  Rendered pins/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 201ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-06-12 21:46:21 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sY+jXowKh0vgdHGg2p0uLO/ehP9eRaZaDAJy/pXC2pIvG3dOccjZ3VuWz0KWxgOVB5kYjnWWThwhQCDGMpVlQ==", "pin"=>{"name"=>"", "photo"=>"", "description"=>""}, "commit"=>"Create Pin"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.7ms)
+  Rendered pins/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (11.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 143ms (Views: 136.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:46:22 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 148ms (Views: 126.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:46:25 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.6ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-06-12 21:46:28 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ae75G0UnzltOdREeaydhbFioroQBIFu1Vasnow8nfqpgcm6HV3fIGoUVE6lbapXUupkdhhOugc6UiG8Dmw/Bcg==", "pin"=>{"name"=>"aa", "photo"=>"ad", "description"=>"as"}, "commit"=>"Create Pin"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "ad"], ["description", "as"], ["created_at", "2018-06-13 01:46:28.940203"], ["updated_at", "2018-06-13 01:46:28.940203"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-06-12 21:46:28 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `Name' for #<Pin:0x007f86f5b13860>
+Did you mean?  name=
+               name?):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @pin.Name %>
+    6: </p>
+    7: 
+    8: 
+  
+app/views/pins/show.html.erb:5:in `_app_views_pins_show_html_erb___2524482241018982567_70108812166000'
+Started GET "/pins/4" for 127.0.0.1 at 2018-06-12 21:46:35 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 111.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:46:39 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "ad" is not present in the asset pipeline.):
+    19:  
+    20:       <tr class="thumbnail">
+    21:         <td><%= pin.description %></td>
+    22:         <td><%= image_tag(pin.photo, :class => 'img-responsive')%></td>
+    23:         <div class="buttons">
+    24:             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
+    25:             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
+  
+app/views/pins/index.html.erb:22:in `block in _app_views_pins_index_html_erb___1956640909475728631_70108809428460'
+app/views/pins/index.html.erb:17:in `_app_views_pins_index_html_erb___1956640909475728631_70108809428460'
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:46:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.7ms)
+  Rendered layouts/_navigation.html.erb (10.0ms)
+  Rendered layouts/_messages.html.erb (1.6ms)
+Completed 200 OK in 190ms (Views: 176.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:46:48 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "ad" is not present in the asset pipeline.):
+    19:  
+    20:       <tr class="thumbnail">
+    21:         <td><%= pin.description %></td>
+    22:         <td><%= image_tag(pin.photo, :class => 'img-responsive')%></td>
+    23:         <div class="buttons">
+    24:             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
+    25:             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
+  
+app/views/pins/index.html.erb:22:in `block in _app_views_pins_index_html_erb___1956640909475728631_70108838329480'
+app/views/pins/index.html.erb:17:in `_app_views_pins_index_html_erb___1956640909475728631_70108838329480'
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:47:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:47:18 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (8.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 8.5ms)
+
+
+  
+ActionView::Template::Error (The asset "ad" is not present in the asset pipeline.):
+    19:  
+    20:       <tr class="thumbnail">
+    21:         <td><%= pin.description %></td>
+    22:         <td><%= image_tag(pin.photo, :class => 'img-responsive')%></td>
+    23:         <div class="buttons">
+    24:             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
+    25:             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
+  
+app/views/pins/index.html.erb:22:in `block in _app_views_pins_index_html_erb___1956640909475728631_70108809699840'
+app/views/pins/index.html.erb:17:in `_app_views_pins_index_html_erb___1956640909475728631_70108809699840'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:47:31 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:47:42 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:47:43 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:47:47 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pins/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/pins/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pins/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:47:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:48:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 119ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:48:09 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (83.8ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:22: syntax error, unexpected '<'
+append=( image_tag(pin.photo></td>
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:24: unknown regexp options - td
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:24: unmatched close parenthesis: /td>
+        <div class="buttons">
+            <td><%= link_to 'Show', pin, :class =>'btn' );@output_buffer.safe_append='</
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected '<'
+            <td>'.freeze;@output_buffer.app
+             ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+_buffer.append=( link_to 'Edit', edit_pin_path(pin), :class 
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+t_pin_path(pin), :class =>'btn' );@output_buffer.safe_append
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:26: unknown regexp options - td
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:27: syntax error, unexpected '<'
+         </div>
+          ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:28: unknown regexp options - tr
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:32: unknown regexp options - tabl
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:34: syntax error, unexpected '<'
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:36: syntax error, unexpected tCONSTANT, expecting ')'
+t_buffer.append=( link_to 'New Pin', new_pin_path );
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:38: unterminated string meets end of file
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:38: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pins/index.html.erb:22: syntax error, unexpected '<'
+append=( image_tag(pin.photo></td>
+app/views/pins/index.html.erb:24: unknown regexp options - td
+app/views/pins/index.html.erb:24: unmatched close parenthesis: /td>
+app/views/pins/index.html.erb:25: syntax error, unexpected '<'
+app/views/pins/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pins/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pins/index.html.erb:26: unknown regexp options - td
+app/views/pins/index.html.erb:27: syntax error, unexpected '<'
+app/views/pins/index.html.erb:28: unknown regexp options - tr
+app/views/pins/index.html.erb:32: unknown regexp options - tabl
+app/views/pins/index.html.erb:34: syntax error, unexpected '<'
+app/views/pins/index.html.erb:36: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pins/index.html.erb:38: unterminated string meets end of file
+app/views/pins/index.html.erb:38: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:48:17 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:22: syntax error, unexpected '<'
+ppend=( image_tag(pin.photo)></td>
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:24: unknown regexp options - td
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:24: unmatched close parenthesis: /td>
+        <div class="buttons">
+            <td><%= link_to 'Show', pin, :class =>'btn' );@output_buffer.safe_append='</
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected '<'
+            <td>'.freeze;@output_buffer.app
+             ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+_buffer.append=( link_to 'Edit', edit_pin_path(pin), :class 
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+t_pin_path(pin), :class =>'btn' );@output_buffer.safe_append
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:26: unknown regexp options - td
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:27: syntax error, unexpected '<'
+         </div>
+          ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:28: unknown regexp options - tr
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:32: unknown regexp options - tabl
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:34: syntax error, unexpected '<'
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:36: syntax error, unexpected tCONSTANT, expecting ')'
+t_buffer.append=( link_to 'New Pin', new_pin_path );
+                              ^
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:38: unterminated string meets end of file
+/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/index.html.erb:38: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pins/index.html.erb:22: syntax error, unexpected '<'
+app/views/pins/index.html.erb:24: unknown regexp options - td
+app/views/pins/index.html.erb:24: unmatched close parenthesis: /td>
+app/views/pins/index.html.erb:25: syntax error, unexpected '<'
+app/views/pins/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pins/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pins/index.html.erb:26: unknown regexp options - td
+app/views/pins/index.html.erb:27: syntax error, unexpected '<'
+app/views/pins/index.html.erb:28: unknown regexp options - tr
+app/views/pins/index.html.erb:32: unknown regexp options - tabl
+app/views/pins/index.html.erb:34: syntax error, unexpected '<'
+app/views/pins/index.html.erb:36: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pins/index.html.erb:38: unterminated string meets end of file
+app/views/pins/index.html.erb:38: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:48:36 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (1.1ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (The asset "ad" is not present in the asset pipeline.):
+    19:  
+    20:       <tr class="thumbnail">
+    21:         <td><%= pin.description %></td>
+    22:         <td><%= image_tag(pin.photo, :class => 'img-responsive')%></td>
+    23:         <div class="buttons">
+    24:             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
+    25:             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
+  
+app/views/pins/index.html.erb:22:in `block in _app_views_pins_index_html_erb___1956640909475728631_70108829392120'
+app/views/pins/index.html.erb:17:in `_app_views_pins_index_html_erb___1956640909475728631_70108829392120'
+Started POST "/__web_console/repl_sessions/cac9808e1bff46eb555825ac8032a178/trace" for 127.0.0.1 at 2018-06-12 21:49:22 -0400
+Started POST "/__web_console/repl_sessions/cac9808e1bff46eb555825ac8032a178/trace" for 127.0.0.1 at 2018-06-12 21:49:24 -0400
+Started POST "/__web_console/repl_sessions/cac9808e1bff46eb555825ac8032a178/trace" for 127.0.0.1 at 2018-06-12 21:49:25 -0400
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:49:33 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (12.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 122ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 21:49:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (9.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 147ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-06-12 21:49:35 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 121.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:49:37 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "ad" is not present in the asset pipeline.):
+    19:  
+    20:       <tr class="thumbnail">
+    21:         <td><%= pin.description %></td>
+    22:         <td><%= image_tag(pin.photo, :class => 'img-responsive')%></td>
+    23:         <div class="buttons">
+    24:             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
+    25:             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
+  
+app/views/pins/index.html.erb:22:in `block in _app_views_pins_index_html_erb___1956640909475728631_70108813722300'
+app/views/pins/index.html.erb:17:in `_app_views_pins_index_html_erb___1956640909475728631_70108813722300'
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:49:49 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 121.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pins/4" for 127.0.0.1 at 2018-06-12 21:49:53 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B8H8mnBFy2HEwKTUIOf5P5OVlR2jCxM9RFsWy9BCw8S5u6/KM7LCG54vLi+p1pWJdDSLbGekXJxc7h+DMt+dOw==", "id"=>"4"}
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 4]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:49:53 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (7.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 129ms (Views: 125.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:49:57 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.8ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 108.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:50:03 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.1ms)
+  Rendered pins/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 123.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:50:54 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.5ms)
+  Rendered pins/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:50:56 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.6ms)
+  Rendered pins/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (7.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 116ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:50:58 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.1ms)
+  Rendered pins/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.8ms)
+  Rendered layouts/_navigation.html.erb (10.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 140ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:06 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.1ms)
+  Rendered pins/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (9.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 115ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:17 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.3ms)
+  Rendered pins/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 129ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:18 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.5ms)
+  Rendered pins/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:19 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:51:20 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.2ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 125ms (Views: 107.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:21 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.8ms)
+  Rendered pins/new.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:30 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.3ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:51:40 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (9.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:53:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.9ms)
+  Rendered pins/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 162ms (Views: 145.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:55:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.9ms)
+  Rendered pins/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 201ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:04 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (8.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 144ms (Views: 136.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:55:15 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.2ms)
+  Rendered pins/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 137.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:23 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (10.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 145ms (Views: 139.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:26 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 121.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2018-06-12 21:55:30 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (4.9ms)
+  Rendered pins/edit.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 140ms (Views: 131.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/pins/2" for 127.0.0.1 at 2018-06-12 21:55:34 -0400
+Processing by PinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+2kC+sw7ZJi0WVNdMBEFV0pXD4d1ur7QtlLsMlcrDEcgxiagHC9SvxkyTH8HUv8N5qcewOvzBDTa4XTvpr3ww==", "pin"=>{"name"=>"Hola", "photo"=>"https://t2.uc.ltmcdn.com/images/6/2/2/img_remedios_caseros_para_las_pulgas_de_los_perros_22226_600.jpg", "description"=>"Perrito1"}, "commit"=>"Update Pin", "id"=>"2"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "pins" SET "name" = ?, "updated_at" = ? WHERE "pins"."id" = ?[0m  [["name", "Hola"], ["updated_at", "2018-06-13 01:55:34.311918"], ["id", 2]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/2
+Completed 302 Found in 23ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2018-06-12 21:55:34 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 139ms (Views: 123.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:36 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 126.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:39 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 157.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2018-06-12 21:55:46 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.7ms)
+  Rendered pins/edit.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 174ms (Views: 166.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/pins/2" for 127.0.0.1 at 2018-06-12 21:55:50 -0400
+Processing by PinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sWmiRZq/PVbVEzHkAiZAcX0n6Auw5weCCrVR9ChxTL9uBx7U8f9tjkumnZiK+0+YF5QoTq6eIWmbB5+XX7cXTQ==", "pin"=>{"name"=>"", "photo"=>"https://t2.uc.ltmcdn.com/images/6/2/2/img_remedios_caseros_para_las_pulgas_de_los_perros_22226_600.jpg", "description"=>"Perrito1"}, "commit"=>"Update Pin", "id"=>"2"}
+  [1m[36mPin Load (0.7ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "pins" SET "name" = ?, "updated_at" = ? WHERE "pins"."id" = ?[0m  [["name", ""], ["updated_at", "2018-06-13 01:55:50.669486"], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/2
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2018-06-12 21:55:50 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 135ms (Views: 129.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:55:52 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 106.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2018-06-12 21:55:55 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (4.3ms)
+  Rendered pins/edit.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 132ms (Views: 125.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-12 21:58:01 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 221ms (Views: 215.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:58:03 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (1.9ms)
+  Rendered pins/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/viviana/Desktop/Proyecto_Lost/app/views/pins/_form.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+er.append=( form.label :name "Nombre" );@output_buffer.safe_
+                              ^):
+  
+app/views/pins/_form.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pins/new.html.erb:5:in `_app_views_pins_new_html_erb___3096240474656096804_70108837126680'
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:58:13 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (9.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 137ms (Views: 134.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 21:58:56 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.2ms)
+  Rendered pins/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (9.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:00:33 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 205ms (Views: 201.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:01:28 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.7ms)
+  Rendered pins/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (9.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 127ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:02:18 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (483.7ms)
+  Rendered pins/new.html.erb within layouts/application (488.6ms)
+Completed 500 Internal Server Error in 501ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `placeholder' for #<#<Class:0x007f86f466d708>:0x007f86f8c95208>):
+    20: <div class="form-group">
+    21:   <div class="field">
+    22:     <%= form.label :photo, "Foto" %>
+    23:     <%= form.text_field :photo, id: :pin_photo, :class => 'form-control', placeholder =>"Url de la foto" %>
+    24:   </div>
+    25: </div>
+    26: 
+  
+app/views/pins/_form.html.erb:23:in `block in _app_views_pins__form_html_erb___1237767860496320033_70108830066740'
+app/views/pins/_form.html.erb:1:in `_app_views_pins__form_html_erb___1237767860496320033_70108830066740'
+app/views/pins/new.html.erb:5:in `_app_views_pins_new_html_erb___3096240474656096804_70108838146020'
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:02:30 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.0ms)
+  Rendered pins/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (9.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 131ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:02:39 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:03:17 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (18.8ms)
+  Rendered pins/new.html.erb within layouts/application (22.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (7.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 134ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:04:23 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.5ms)
+  Rendered pins/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 208ms (Views: 205.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:04:24 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (3.6ms)
+  Rendered pins/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation_right.html (0.6ms)
+  Rendered layouts/_navigation.html.erb (13.5ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 174ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:04:52 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (1.9ms)
+  Rendered pins/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (8.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:05:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.8ms)
+  Rendered pins/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (11.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 150ms (Views: 147.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:05:30 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.2ms)
+  Rendered pins/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (8.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:06:27 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.6ms)
+  Rendered pins/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (7.1ms)
+  Rendered layouts/_messages.html.erb (12.9ms)
+Completed 200 OK in 123ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:07:06 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (1.7ms)
+  Rendered pins/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:07:23 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.3ms)
+  Rendered pins/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation_right.html (0.4ms)
+  Rendered layouts/_navigation.html.erb (9.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-12 22:07:50 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (2.1ms)
+  Rendered pins/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.7ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-06-14 17:57:12 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (32.0ms)
+  Rendered pins/new.html.erb within layouts/application (39.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.5ms)
+  Rendered layouts/_navigation.html.erb (9.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 1664ms (Views: 1629.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 17:57:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-06-14 17:57:28 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 132ms (Views: 118.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-06-14 17:57:29 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation_right.html (0.7ms)
+  Rendered layouts/_navigation.html.erb (7.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 114ms (Views: 98.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 17:57:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_right.html (0.3ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
