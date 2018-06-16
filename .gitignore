@@ -28,3 +28,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+<<<<<<< HEAD
+=======
+
+db/development.sqlite3
+log/development.log
+>>>>>>> newFeature

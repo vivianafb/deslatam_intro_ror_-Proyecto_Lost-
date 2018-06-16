@@ -9,9 +9,11 @@
         <%= image_tag(pin.photo, :class => 'img-responsive')%>
         <p><%= pin.description %></p>
         <div class="buttons">
+
           <%= link_to 'Ver', pin, :class =>'btn btn-primary' %>
           <%= link_to 'Editar', edit_pin_path(pin), :class =>'btn btn-info' %>
           <%= link_to 'Borrar', pin, method: :delete, data: { confirm: 'Are you sure?' } , :class =>'btn btn-danger'%>
+
          </div>
       </div>
 
@@ -22,4 +24,6 @@
 
 <br>
 
+
 <%= link_to 'New Pin', new_pin_path, :class =>'btn btn-success' %>
+
