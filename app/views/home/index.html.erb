@@ -1,2 +1,36 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Un gusto volver a verte (◠‿◠✿)</h1> <br/>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= asset_path 'index_foto.png' %>">
+      <div class="caption">
+        <h3>Fotos !!!</h3>
+        <p>Comparte fotos con tus amigos y crea tu propia galería de imagenes. Busca y encuentra miles de diseños y trabajos hechos por personas de todo el mundo :D</p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= asset_path 'index_registro.jpeg' %>">
+      <div class="caption">
+        <h3>Regístrate :)</h3>
+        <p>Comienza desde ya ! Sólo 5 minutos y podrás acceder a miles de imágenes y crear tus propias colecciones.</p>
+        <p><a href="<%= new_user_registration_path %>" class="btn btn-primary" role="button">Registrarse</a> </p>
+      </div>
+    </div>
+  </div>
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= asset_path 'index_entrar.jpg' %>">
+      <div class="caption">
+        <h3>Inicia Sesión</h3>
+        <p>Que esperas?? Ven y entra ya !! Esta muy frio afuera <br/> o(≧o≦)o </p>
+        <p><a href="<%= new_user_session_path %>" class="btn btn-default" role="button">Entrar ya!</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>

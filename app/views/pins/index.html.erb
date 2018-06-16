@@ -24,7 +24,9 @@
         <div class="buttons">
             <td><%= link_to 'Show', pin, :class =>'btn' %></td>
             <td><%= link_to 'Edit', edit_pin_path(pin), :class =>'btn' %></td>
-            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } , :class =>'btn'%></td>
+            <% if user_signed_in? %>
+              <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } , :class =>'btn'%></td>
+            <% end %>
          </div>
       </tr>
 
@@ -33,5 +35,6 @@
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Pin', new_pin_path %>
+<% end %>
